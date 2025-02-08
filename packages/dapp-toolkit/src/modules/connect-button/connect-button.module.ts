@@ -301,12 +301,9 @@ export const ConnectButtonModule = (
             }${data}`
 
             window.open(url)
-          } else if (type === 'setupGuide')
-            window.open('https://wallet.radixdlt.com')
-          else if (type === 'getWallet') {
-            window.open('https://app.radixdlt.com/qr-code')
-          } else if (type === 'showQrCode' && transport?.showQrCode)
+          } else {
             transport.showQrCode()
+          }
         }),
       )
       .subscribe(),
